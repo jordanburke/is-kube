@@ -1,0 +1,42 @@
+{
+  "name": "tsup-library-template",
+  "version": "0.0.1",
+  "description": "A template for building a library with tsup",
+  "author": "ozerorhun@gmail.com",
+  "license": "MIT",
+  "url": "https://github.com/orabazu/tsup-libary-template",
+  "scripts": {
+    "ts-types": "tsc",
+    "build:dev": "rimraf lib && tsup --watch",
+    "build:prod": "rimraf dist && cross-env NODE_ENV=production tsup",
+    "build:watch": "tsup --watch",
+    "lint:fix": "eslint ./src --ext .ts,.tsx --quiet --fix --ignore-path ./.gitignore",
+    "lint:format": "prettier  --loglevel warn --write \"./**/*.{ts,tsx,css,md,json}\" ",
+    "lint": "pnpm lint:format && pnpm lint:fix "
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^8.9.0",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "prettier": "^3.0.0",
+    "rimraf": "^5.0.1",
+    "tsup": "^7.1.0"
+  },
+  "main": "lib/index.cjs",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "type": "module",
+  "dependencies": {
+    "typescript": "^5.1.6"
+  },
+  "files": [
+    "lib",
+    "dist"
+  ]
+}
