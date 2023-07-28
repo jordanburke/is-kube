@@ -1,5 +1,18 @@
-//import { foo } from './Foo';
+import fs from "node:fs"
 
-const helloWorld = 'Hello World!';
+let isKubeCached: boolean
 
-export { helloWorld };
+const hasKubeCGroup = () => {
+  try {
+    return fs.readFileSync("/proc/self/cgroup", "utf8").includes("kube")
+  } catch {
+    return false
+  }
+}
+
+const isKubernetes = () => {
+  isKubeCached ??= hasKubeCGroup()
+  return isKubeCached
+}
+
+export default isKubernetes
