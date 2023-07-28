@@ -1,7 +1,7 @@
 {
   "name": "is-kube",
   "version": "1.0.0",
-  "description": "Check if the process is running inside a Kubernetes container",
+  "description": "Checks to see if the process is running inside a Kubernetes container",
   "author": "jordan.burke@gmail.com",
   "license": "MIT",
   "url": "https://github.com/jordanburke/is-kube",
