@@ -1,10 +1,10 @@
 {
-  "name": "is-kubernetes",
+  "name": "is-kube",
   "version": "0.0.1",
   "description": "Check if the process is running inside a Kubernetes container",
   "author": "jordan.burke@gmail.com",
   "license": "MIT",
-  "url": "https://github.com/jordanburke/is-kubernetes",
+  "url": "https://github.com/jordanburke/is-kube",
   "scripts": {
     "ts-types": "tsc",
     "build:dev": "rimraf lib && tsup --watch",
