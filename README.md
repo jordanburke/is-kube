@@ -1,20 +1,31 @@
-## Tsup library template
+# is-kube
 
-Forked Update to:
+> Checks to see if the process is running inside a kubernetes container (i.e., similar to is-docker)
 
-A template to get you started library development based on tsup
+## Install
 
-[Further explanation on blog post](https://orabazu.hashnode.dev/how-to-bundle-a-tree-shakable-typescript-library-for-web-with-tsup-and-publish-with-npm)
+```
+$ npm install is-kube
+```
 
 ## Usage
 
-```bash
-# using pnpm
-pnpm
+JavaScript:
 
-# Development build and watch changes
-pnpm build:dev
+```javascript
+const isKube = require('is-kube');
 
-# Prod build
-pnpm build:prod
+if (isKube()) {
+  console.log('Running inside a kubernetes container');
+}
+```
+
+Typescript:
+
+```typescript
+import isKube from "is-kube"
+
+if (isKube()) {
+  console.log('Running inside a kubernetes container');
+}
 ```
