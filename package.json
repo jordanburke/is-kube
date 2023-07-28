@@ -1,10 +1,10 @@
 {
-  "name": "tsup-library-template",
+  "name": "is-kubernetes",
   "version": "0.0.1",
-  "description": "A template for building a library with tsup",
-  "author": "ozerorhun@gmail.com",
+  "description": "Check if the process is running inside a Kubernetes container",
+  "author": "jordan.burke@gmail.com",
   "license": "MIT",
-  "url": "https://github.com/orabazu/tsup-libary-template",
+  "url": "https://github.com/jordanburke/is-kubernetes",
   "scripts": {
     "ts-types": "tsc",
     "build:dev": "rimraf lib && tsup --watch",
